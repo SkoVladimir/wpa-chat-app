@@ -71,11 +71,11 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_name',
-        'USER': 'db_user',
-        'PASSWORD': 'db_user_password',
-        'HOST': 'HEROKU_POSTGRESQL_BRONZE_URL',
-        'PORT': 'db_port_number',
+        'NAME': 'ddmhh9orcmp81j',
+        'USER': 'sdqeiaehsywlgy',
+        'PASSWORD': 'abb49359650ff403139ed581f6c6a44647eb5eecc53a80e34935ad69244a9523',
+        'HOST': 'ec2-46-137-170-51.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

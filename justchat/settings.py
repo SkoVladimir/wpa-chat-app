@@ -64,7 +64,7 @@ CHANNEL_LAYERS = {
         "CONFIG": {
             "hosts": [os.environ.get('REDISCLOUD', 'redis://localhost:6379')],
         },
-        "ROUTING": "justchat.routing.channel_routing",
+        "ROUTING": "chat.routing.websocket_urlpatterns",
     },
 }
 

@@ -2,7 +2,14 @@
 from django.urls import re_path
 
 from .consumers import ChatConsumer
+from . import consumers
 
 websocket_urlpatterns = [
     re_path(r'^ws/chat/(?P<room_name>[^/]+)/$', ChatConsumer),
 ]
+
+channel_routing = {
+    'websocket.connect': consumers.connect,
+    'websocket.receive': consumers.receive,
+    'websocket.disconnect': consumers.disconnect,
+}

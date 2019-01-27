@@ -60,11 +60,10 @@ ASGI_APPLICATION = "justchat.routing.application"
 
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [os.environ.get('REDISCLOUD', 'redis://localhost:6379')],
+            "hosts": [("redis-wpa-chat-app-9150380", 6379)],
         },
-        "ROUTING": "chat.routing.channel_routing",
     },
 }
 
